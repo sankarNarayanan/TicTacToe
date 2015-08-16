@@ -1,0 +1,9 @@
+package com.sample.tictactoe;
+
+public class PlayGame {
+
+	public String getuserMoveAndRespond(){
+		return null;
+	}
+	
+}

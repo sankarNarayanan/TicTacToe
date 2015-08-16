@@ -1,0 +1,40 @@
+package com.sample.tictactoe;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class PlayGame {
+	public void getuserMoveAndRespond(HttpServletRequest request, HttpServletResponse response) throws Exception{
+		HttpSession session = request.getSession(true);
+		ArrayList<String> systemSelectedpositions = null, userSelectedPositions = null;
+		if (!(session.isNew())){
+		systemSelectedpositions = (ArrayList<String>) session.getAttribute("systemSelectedPos");
+		userSelectedPositions = (ArrayList<String>) session.getAttribute("userSelectedPos");
+		 }
+		userSelectedPositions.add(userPositionString);
+		if ((userSelectedPositions.size() + systemSelectedpositions.size()) >= 8){
+			response.setContentType("application/json");
+	    	PrintWriter out = response.getWriter();
+	    	out.print("{\"statusCode\":\"1115\",\"statusMessage\":\"Game Over!\"}");
+			out.flush();
+			return;
+		}else{
+			String userPositionString = request.getParameter("position");
+			
+			
+		}
+	}
+	
+	public int calculateNextMove (String[] userPositions, String[] systemPos){
+		
+		if (null != systemPos){
+			
+		}
+		
+		return (Integer) null;
+	}
+}

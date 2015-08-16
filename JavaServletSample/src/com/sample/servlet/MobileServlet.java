@@ -54,6 +54,8 @@ public class MobileServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+    	}else if(moduleName.equalsIgnoreCase("playGame")){
+    		
     	}else{
     	System.out.println("user name is: "+request.getParameter("username")+ "password is" +request.getParameter("password") + "over");
     	response.setContentType("application/json");

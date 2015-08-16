@@ -1,0 +1,19 @@
+package com.sample.tictactoe;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class PlayGame {
+
+	public String getuserMoveAndRespond(HttpServletRequest request, HttpServletResponse response){
+		String userPositionString = request.getParameter("position");
+		
+		int userPosition = Integer.parseInt(userPositionString); 
+		
+		
+		
+		
+		return null;
+	}
+	
+}
