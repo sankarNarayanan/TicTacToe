@@ -12,7 +12,7 @@ public class PlayGame {
 	public void getUserMoveAndRespond(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		HttpSession session = request.getSession(true);
 		ArrayList<String> systemSelectedpositions = new ArrayList<String>(), userSelectedPositions = new ArrayList<String>();
-		if (null != session.getAttribute("systemSelectedPos") && null != session.getAttribute("userSelectedPos")){
+		if (null != session.getAttribute("userSelectedPos")){
 			if (!(session.isNew())){
 				systemSelectedpositions = (ArrayList<String>) session.getAttribute("systemSelectedPos");
 				userSelectedPositions = (ArrayList<String>) session.getAttribute("userSelectedPos");
@@ -42,9 +42,4 @@ public class PlayGame {
 		
 		return (Integer) null;
 	}
-	
-	public int findBestPosition (ArrayList<String> availablePositions, ArrayList<String> userPositions){
-		return (Integer) null;
-	}
-	
 }

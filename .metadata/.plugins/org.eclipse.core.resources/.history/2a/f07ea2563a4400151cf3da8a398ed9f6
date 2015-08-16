@@ -42,9 +42,4 @@ public class PlayGame {
 		
 		return (Integer) null;
 	}
-	
-	public int findBestPosition (ArrayList<String> availablePositions, ArrayList<String> userPositions){
-		return (Integer) null;
-	}
-	
 }
