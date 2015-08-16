@@ -1,5 +1,7 @@
 package com.sample.database;
 
+import java.net.UnknownHostException;
+
 import com.mongodb.*;
 import com.sample.models.*;
 
@@ -25,6 +27,27 @@ public class DatabaseConnection {
 		collection.insert(user);
 		sm.setStatusCode("1113");
 		sm.setStatusMessage("User Name Created");
+		}
+		return sm;
+	}
+	
+	public StatusModel authenticateUser(UserModel userModel) throws UnknownHostException{
+		StatusModel sm = new StatusModel();
+		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+		System.out.println("Mongo client: " +mongoClient);
+		DB database = mongoClient.getDB("my_db");
+		System.out.println("Mongo Database" +database);
+		DBCollection collection = database.getCollection("UserTable");
+		System.out.println("Mongo Collection" +collection);
+		DBObject query = new BasicDBObject("_id", userModel.getUserName());
+		DBCursor cursor = collection.find(query);
+		DBObject userObject = cursor.one();
+		if (null != userObject){
+			sm.setStatusCode("1111");
+			sm.setStatusMessage("Successfully Logged in");
+		}else{
+		sm.setStatusCode("1114");
+		sm.setStatusMessage("Sorry! Create user to Login.");
 		}
 		return sm;
 	}
