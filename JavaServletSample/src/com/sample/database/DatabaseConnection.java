@@ -6,9 +6,24 @@ import com.mongodb.*;
 import com.sample.models.*;
 
 public class DatabaseConnection {
+	
+		private MongoClient mongoClient;
+	
+	 //create an object of SingleObject
+	   private static DatabaseConnection instance = new DatabaseConnection();
+
+	   //make the constructor private so that this class cannot be
+	   //instantiated
+	   private DatabaseConnection(){}
+
+	   //Get the only object available
+	   public static DatabaseConnection getInstance() throws Exception{
+		   instance.mongoClient = new MongoClient( "localhost" , 27017 );
+	      return instance;
+	   }
+	
 	public StatusModel createUserName(UserModel userModel) throws Exception{
 		StatusModel sm = new StatusModel();
-		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 		System.out.println("Mongo client: " +mongoClient);
 		DB database = mongoClient.getDB("my_db");
 		System.out.println("Mongo Database" +database);
@@ -33,7 +48,6 @@ public class DatabaseConnection {
 	
 	public StatusModel authenticateUser(UserModel userModel) throws UnknownHostException{
 		StatusModel sm = new StatusModel();
-		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 		System.out.println("Mongo client: " +mongoClient);
 		DB database = mongoClient.getDB("my_db");
 		System.out.println("Mongo Database" +database);
@@ -57,6 +71,14 @@ public class DatabaseConnection {
 	    return new BasicDBObject("_id", user.getUserName())
 	                     .append("name", user.getUserName())
 	                     .append("password", user.getPassword());
+	}
+
+	public MongoClient getMongoClient() {
+		return mongoClient;
+	}
+
+	public void setMongoClient(MongoClient mongoClient) {
+		this.mongoClient = mongoClient;
 	}
 	
 }

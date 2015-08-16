@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.sample.database.DatabaseConnection.mongoClient&apos; in &apos;com.sample.database.DatabaseConnection&apos;&#x0A;- Original project: &apos;JavaServletSample&apos;&#x0A;- Original element: &apos;com.sample.database.DatabaseConnection.mongoClient&apos;&#x0A;- Getter method name: &apos;getMongoClient&apos;&#x0A;- Setter method name: &apos;setMongoClient&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;mongoClient&apos;" flags="589830" getter="getMongoClient" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;com.sample.database{DatabaseConnection.java[DatabaseConnection^mongoClient" insertion="4" setter="setMongoClient" stamp="1439734901882" version="1.0" visibility="1"/>
+</session>

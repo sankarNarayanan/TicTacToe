@@ -19,7 +19,7 @@ public class AuthenticateUser {
 		response.setContentType("application/json");
     	PrintWriter out = response.getWriter();
 		if (null != userName && null != password){
-			DatabaseConnection db = new DatabaseConnection();
+			DatabaseConnection db = DatabaseConnection.getInstance();
 			UserModel um = new UserModel();
 			um.setUserName(userName);
 			um.setPassword(password);
