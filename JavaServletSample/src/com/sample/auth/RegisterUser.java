@@ -5,13 +5,12 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.sample.models.*;
-
 import com.sample.database.DatabaseConnection;
 
 public class RegisterUser {
 	
 	public void createUser(HttpServletRequest request, HttpServletResponse response) throws Exception
-	{
+	{ 
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
 		response.setContentType("application/json");
