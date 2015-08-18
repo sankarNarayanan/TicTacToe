@@ -1,0 +1,92 @@
+package com.sample.tictactoe;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+
+public class PlayGame {
+	@SuppressWarnings("unchecked")
+	public void getUserMoveAndRespond(HttpServletRequest request, HttpServletResponse response) throws Exception{
+		
+		String userPositionString = request.getParameter("selectedPosition");
+		String boardState = request.getParameter("boardState");
+		ArrayList<String> userPositions = null, systemPositions = null, emptyPositions= null;
+		JsonObject boardStatejsonObject = (JsonObject)new JsonParser().parse(boardState);
+		 if (boardStatejsonObject.isJsonObject()) {
+	            Set<Entry<String, JsonElement>> entries = ((JsonObject) boardStatejsonObject).entrySet();
+	            if (entries != null) {
+	                for (Entry<String, JsonElement> node : entries) {
+	                	String currentState = node.getValue().getAsString();
+	                	if (currentState.equalsIgnoreCase("s")){
+	                		systemPositions.add(node.getKey());
+	                	}else if (currentState.equalsIgnoreCase("u")){
+	                		
+	                	}else if (currentState.equalsIgnoreCase("e")){
+	                		
+	                	}
+	                	
+	                    System.out.println(node.getKey() + " : ");
+	                    System.out.println(node.getValue().getAsString());
+	                }
+	            }
+	        } 
+
+		
+		
+
+		
+		HttpSession session = request.getSession(true);
+		ArrayList<String> systemSelectedpositions = new ArrayList<String>(), userSelectedPositions = new ArrayList<String>();
+		if (null != session.getAttribute("systemSelectedPos") && null != session.getAttribute("userSelectedPos")){
+			if (!(session.isNew())){
+				systemSelectedpositions = (ArrayList<String>) session.getAttribute("systemSelectedPos");
+				userSelectedPositions = (ArrayList<String>) session.getAttribute("userSelectedPos");
+			}
+		}
+		//String userPositionString = request.getParameter("position");
+		userSelectedPositions.add(userPositionString);
+		if ((userSelectedPositions.size() + systemSelectedpositions.size()) >= 8){
+			response.setContentType("application/json");
+			PrintWriter out = response.getWriter();
+			out.print("{\"statusCode\":\"1115\",\"statusMessage\":\"Game Over!\"}");
+			out.flush();
+			return;
+		}else{
+
+		}
+	}
+
+	public int calculateNextMove (ArrayList<String> userPositions, ArrayList<String> systemPos){
+		ArrayList<String> totalPos = (ArrayList<String>) Arrays.asList("1", "2","3", "4","5", "6","7", "8","9");
+		ArrayList<String> availablePos = new ArrayList<String>();
+		for(String element:totalPos){
+			 if (!userPositions.contains(element) && !systemPos.contains(element)){
+				 availablePos.add(element);
+			 }
+		}
+		
+		//Winning positions are 123, 456, 789, 147, 258, 369, 159, 753
+		
+		//To find if opponent is winning
+		
+		
+		return (Integer) null;
+	}
+	
+	public int findBestPosition (ArrayList<String> availablePositions, ArrayList<String> userPositions){
+		return (Integer) null;
+	}
+	
+}
