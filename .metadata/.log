@@ -1528,3 +1528,547 @@ java.net.UnknownHostException: dist.springsource.com: nodename nor servname prov
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-08-19 15:21:11.681
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1295)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1248)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1164)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-08-19 15:21:11.684
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1295)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1248)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1164)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1098)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 3 2015-08-19 15:22:42.577
+!MESSAGE Full project indexing required:
+  [-] /Users/Sankar/Desktop/Eclipse/gson-2.3.1.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:172)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.suggestRebuild(ProjectTypesIndex.java:456)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.rebuildIndex(TypesIndexService.java:120)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.processElementRemoved(TypesIndexService.java:107)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:76)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:63)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:63)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.elementChanged(TypesIndexService.java:49)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.checkExternalArchiveChanges(DeltaProcessor.java:843)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2003)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:271)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:368)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1592)
+	at org.eclipse.egit.ui.Activator$ResourceRefreshJob.runInWorkspace(Activator.java:418)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2015-08-19 15:38:39.321 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/Sankar/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/Sankar/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.fx.core 4 0 2015-08-19 15:38:43.047
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.fx.core [946]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.annotation; bundle-version="[2.0.0,3.0.0)"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.jdt.annotation; bundle-version="2.0.100.v20150311-1658"
+       org.eclipse.jdt.annotation [364]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.fx.osgi.util 4 0 2015-08-19 15:38:43.059
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.fx.osgi.util [948]
+  Unresolved requirement: Require-Bundle: org.eclipse.fx.core; bundle-version="0.9.0"
+    -> Bundle-SymbolicName: org.eclipse.fx.core; bundle-version="2.0.0.201506111454"
+       org.eclipse.fx.core [946]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.annotation; bundle-version="[2.0.0,3.0.0)"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.jdt.annotation; bundle-version="2.0.100.v20150311-1658"
+              org.eclipse.jdt.annotation [364]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.springsource.ide.eclipse.commons.browser 4 0 2015-08-19 15:38:43.076
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springsource.ide.eclipse.commons.browser [1027]
+  Unresolved requirement: Require-Bundle: org.eclipse.fx.osgi.util; bundle-version="0.9.0"
+    -> Bundle-SymbolicName: org.eclipse.fx.osgi.util; bundle-version="2.0.0.201506111454"
+       org.eclipse.fx.osgi.util [948]
+         Unresolved requirement: Require-Bundle: org.eclipse.fx.core; bundle-version="0.9.0"
+           -> Bundle-SymbolicName: org.eclipse.fx.core; bundle-version="2.0.0.201506111454"
+              org.eclipse.fx.core [946]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+                Unresolved requirement: Require-Bundle: org.eclipse.jdt.annotation; bundle-version="[2.0.0,3.0.0)"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.jdt.annotation; bundle-version="2.0.100.v20150311-1658"
+                     org.eclipse.jdt.annotation [364]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.springsource.ide.eclipse.commons.gettingstarted 4 0 2015-08-19 15:38:43.088
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springsource.ide.eclipse.commons.gettingstarted [1034]
+  Unresolved requirement: Require-Bundle: org.springsource.ide.eclipse.commons.browser
+    -> Bundle-SymbolicName: org.springsource.ide.eclipse.commons.browser; bundle-version="3.7.0.201506251212-RELEASE"; singleton:="true"
+       org.springsource.ide.eclipse.commons.browser [1027]
+         Unresolved requirement: Require-Bundle: org.eclipse.fx.osgi.util; bundle-version="0.9.0"
+           -> Bundle-SymbolicName: org.eclipse.fx.osgi.util; bundle-version="2.0.0.201506111454"
+              org.eclipse.fx.osgi.util [948]
+                Unresolved requirement: Require-Bundle: org.eclipse.fx.core; bundle-version="0.9.0"
+                  -> Bundle-SymbolicName: org.eclipse.fx.core; bundle-version="2.0.0.201506111454"
+                     org.eclipse.fx.core [946]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+                       Unresolved requirement: Require-Bundle: org.eclipse.jdt.annotation; bundle-version="[2.0.0,3.0.0)"; resolution:="optional"
+                         -> Bundle-SymbolicName: org.eclipse.jdt.annotation; bundle-version="2.0.100.v20150311-1658"
+                            org.eclipse.jdt.annotation [364]
+                              Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.net 1 0 2015-08-19 15:38:50.645
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2015-08-19 15:38:51.205
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2015-08-19 15:38:51.205
+!MESSAGE Could not load repository template extension contributed by 'org.springsource.ide.eclipse.dashboard.ui' with connectorKind 'jira'
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2015-08-19 15:38:51.205
+!MESSAGE Could not load repository template extension contributed by 'org.springsource.ide.eclipse.dashboard.ui' with connectorKind 'jira'
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2015-08-19 15:39:00.193
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2015-08-19 15:39:07.681
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.getTransport_e3_7(P2TransportService.java:80)
+	at org.springsource.ide.eclipse.commons.internal.core.net.P2TransportService.<init>(P2TransportService.java:52)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.getTransport(HttpUtil.java:151)
+	at org.springsource.ide.eclipse.commons.core.HttpUtil.stream(HttpUtil.java:165)
+	at org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob$1.run(AggregateFeedJob.java:145)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.ds 2 0 2015-08-19 15:39:17.703
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:93)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:369)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:310)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:210)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 4 2015-08-19 15:41:21.718
+!MESSAGE Exception loading preferences from: /gson-2.3.1/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /Users/Sankar/Desktop/Architectures/GIT-TicTacToe/gson-2.3.1/.settings/org.eclipse.jdt.core.prefs.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:49)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:391)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:834)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:269)
+	at org.eclipse.core.internal.resources.ProjectPreferences.load(ProjectPreferences.java:507)
+	at org.eclipse.core.internal.resources.ProjectPreferences.load(ProjectPreferences.java:492)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.getChild(EclipsePreferences.java:534)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:668)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.resources.ProjectScope.getNode(ProjectScope.java:68)
+	at org.eclipse.jdt.internal.core.JavaProject.getEclipsePreferences(JavaProject.java:1490)
+	at org.eclipse.jdt.internal.core.JavaProject.getOption(JavaProject.java:1657)
+	at org.eclipse.jdt.internal.core.PackageFragment.internalIsValidPackageName(PackageFragment.java:395)
+	at org.eclipse.jdt.internal.core.PackageFragment.<init>(PackageFragment.java:65)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getPackageFragment(PackageFragmentRoot.java:518)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.computeFolderChildren(PackageFragmentRoot.java:220)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.computeChildren(PackageFragmentRoot.java:198)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:253)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:226)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:291)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2329)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2339)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1357)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1264)
+	at org.eclipse.jdt.internal.core.manipulation.JavaElementPropertyTester.test(JavaElementPropertyTester.java:155)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:106)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.isApplicable(ContextualLaunchAction.java:287)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.fillMenu(ContextualLaunchAction.java:218)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction$1.menuShown(ContextualLaunchAction.java:141)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1499)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1299)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1276)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1256)
+	at org.eclipse.jface.action.ActionContributionItem.access$4(ActionContributionItem.java:1245)
+	at org.eclipse.jface.action.ActionContributionItem$8.handleEvent(ActionContributionItem.java:1218)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1495)
+	at org.eclipse.swt.widgets.Menu.menuWillOpen(Menu.java:811)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5746)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSMenu.popUpContextMenu(NSMenu.java:77)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:280)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4149)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3691)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: java.io.FileNotFoundException: /Users/Sankar/Desktop/Architectures/GIT-TicTacToe/gson-2.3.1/.settings/org.eclipse.jdt.core.prefs (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:382)
+	... 82 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2015-08-19 15:41:21.719
+!MESSAGE File not found: /Users/Sankar/Desktop/Architectures/GIT-TicTacToe/gson-2.3.1/.settings/org.eclipse.jdt.core.prefs.
+!STACK 0
+java.io.FileNotFoundException: /Users/Sankar/Desktop/Architectures/GIT-TicTacToe/gson-2.3.1/.settings/org.eclipse.jdt.core.prefs (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:382)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:834)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:269)
+	at org.eclipse.core.internal.resources.ProjectPreferences.load(ProjectPreferences.java:507)
+	at org.eclipse.core.internal.resources.ProjectPreferences.load(ProjectPreferences.java:492)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.getChild(EclipsePreferences.java:534)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:668)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.resources.ProjectScope.getNode(ProjectScope.java:68)
+	at org.eclipse.jdt.internal.core.JavaProject.getEclipsePreferences(JavaProject.java:1490)
+	at org.eclipse.jdt.internal.core.JavaProject.getOption(JavaProject.java:1657)
+	at org.eclipse.jdt.internal.core.PackageFragment.internalIsValidPackageName(PackageFragment.java:395)
+	at org.eclipse.jdt.internal.core.PackageFragment.<init>(PackageFragment.java:65)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getPackageFragment(PackageFragmentRoot.java:518)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.computeFolderChildren(PackageFragmentRoot.java:220)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.computeChildren(PackageFragmentRoot.java:198)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:253)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:226)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:291)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2329)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2339)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1357)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1264)
+	at org.eclipse.jdt.internal.core.manipulation.JavaElementPropertyTester.test(JavaElementPropertyTester.java:155)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:106)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.isApplicable(ContextualLaunchAction.java:287)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.fillMenu(ContextualLaunchAction.java:218)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction$1.menuShown(ContextualLaunchAction.java:141)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1499)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1299)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1276)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1256)
+	at org.eclipse.jface.action.ActionContributionItem.access$4(ActionContributionItem.java:1245)
+	at org.eclipse.jface.action.ActionContributionItem$8.handleEvent(ActionContributionItem.java:1218)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1495)
+	at org.eclipse.swt.widgets.Menu.menuWillOpen(Menu.java:811)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5746)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSMenu.popUpContextMenu(NSMenu.java:77)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:280)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4149)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3691)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2015-08-19 15:41:21.808
+!MESSAGE Exception loading preferences from: /Users/Sankar/Desktop/Architectures/GIT-TicTacToe/gson-2.3.1/.settings/org.eclipse.jdt.core.prefs.
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception loading preferences from: /gson-2.3.1/.settings/org.eclipse.jdt.core.prefs.
+	at org.eclipse.core.internal.resources.ProjectPreferences.load(ProjectPreferences.java:515)
+	at org.eclipse.core.internal.resources.ProjectPreferences.load(ProjectPreferences.java:492)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.getChild(EclipsePreferences.java:534)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:668)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.resources.ProjectScope.getNode(ProjectScope.java:68)
+	at org.eclipse.jdt.internal.core.JavaProject.getEclipsePreferences(JavaProject.java:1490)
+	at org.eclipse.jdt.internal.core.JavaProject.getOption(JavaProject.java:1657)
+	at org.eclipse.jdt.internal.core.PackageFragment.internalIsValidPackageName(PackageFragment.java:395)
+	at org.eclipse.jdt.internal.core.PackageFragment.<init>(PackageFragment.java:65)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getPackageFragment(PackageFragmentRoot.java:518)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.computeFolderChildren(PackageFragmentRoot.java:220)
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.computeChildren(PackageFragmentRoot.java:198)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.initializePackageNames(JavaProjectElementInfo.java:253)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.getProjectCache(JavaProjectElementInfo.java:226)
+	at org.eclipse.jdt.internal.core.JavaProjectElementInfo.newNameLookup(JavaProjectElementInfo.java:291)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2329)
+	at org.eclipse.jdt.internal.core.JavaProject.newNameLookup(JavaProject.java:2339)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1357)
+	at org.eclipse.jdt.internal.core.JavaProject.findType(JavaProject.java:1264)
+	at org.eclipse.jdt.internal.core.manipulation.JavaElementPropertyTester.test(JavaElementPropertyTester.java:155)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:100)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:106)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.isApplicable(ContextualLaunchAction.java:287)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.fillMenu(ContextualLaunchAction.java:218)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction$1.menuShown(ContextualLaunchAction.java:141)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1499)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1299)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1276)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1256)
+	at org.eclipse.jface.action.ActionContributionItem.access$4(ActionContributionItem.java:1245)
+	at org.eclipse.jface.action.ActionContributionItem$8.handleEvent(ActionContributionItem.java:1218)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4230)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1491)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1514)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1495)
+	at org.eclipse.swt.widgets.Menu.menuWillOpen(Menu.java:811)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5746)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSMenu.popUpContextMenu(NSMenu.java:77)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:280)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4149)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3691)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 3 2015-08-19 16:58:15.272
+!MESSAGE Full project indexing required:
+  [+] /Users/Sankar/Downloads/gson-2.3.1.jar
+  [-] /Users/Sankar/Desktop/Eclipse/gson-2.3.1.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:172)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:128)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
