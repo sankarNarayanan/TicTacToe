@@ -5,21 +5,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
-
-/** Algorithm Explained 
- * Get all possible moves.
- * Evaluate each move till the end state.
- * Calculate a score for each move.
- * Play the move with positive score or zero score if positive is not there.
- * Always consider that the opponent is strong. 
- **/
-
 
 
 public class PlayGame {
