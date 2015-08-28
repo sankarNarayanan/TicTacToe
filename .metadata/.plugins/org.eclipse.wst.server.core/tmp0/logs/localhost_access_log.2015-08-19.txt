@@ -1,7 +1,0 @@
-127.0.0.1 - - [19/Aug/2015:15:45:29 +0530] "GET / HTTP/1.1" 404 994
-0:0:0:0:0:0:0:1 - - [19/Aug/2015:15:47:55 +0530] "POST /JavaServletSample/FirstServlet HTTP/1.1" 404 1054
-0:0:0:0:0:0:0:1 - - [19/Aug/2015:15:48:22 +0530] "POST /JavaServletSample/FirstServlet HTTP/1.1" 404 1054
-0:0:0:0:0:0:0:1 - - [19/Aug/2015:16:07:47 +0530] "POST /JavaServletSample/FirstServlet HTTP/1.1" 404 1054
-0:0:0:0:0:0:0:1 - - [19/Aug/2015:16:07:56 +0530] "POST /JavaServletSample/FirstServlet HTTP/1.1" 404 1054
-0:0:0:0:0:0:0:1 - - [19/Aug/2015:16:08:05 +0530] "GET /JavaServletSample/FirstServlet HTTP/1.1" 404 1054
-0:0:0:0:0:0:0:1 - - [19/Aug/2015:16:08:05 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
