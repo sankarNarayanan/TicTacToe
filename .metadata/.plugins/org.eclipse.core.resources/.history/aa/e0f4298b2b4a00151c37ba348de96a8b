@@ -106,6 +106,8 @@ public class PlayGame {
 
 	public void getUserMoveAndRespond(HttpServletRequest request, HttpServletResponse response) throws Exception{
 
+
+
 		String boardState = request.getParameter("boardState");
 		ArrayList<String> userPositions = new ArrayList<String>(), 
 				systemPositions = new ArrayList<String>(), 
